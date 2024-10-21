@@ -60,3 +60,8 @@ function line_length(x1,x2,y1,y2) {
     return Math.sqrt((delta(x1,x2)**2)+(delta(y1,y2)**2))
 }
 
+// Find the volume for a rectangular prism
+function rect_prism_volume(length,width,height) {
+    return length*width*height
+}
+
