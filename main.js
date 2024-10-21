@@ -23,12 +23,12 @@ function round(value, decimals) {
 function round_user(value) {
     // Get the number of decimals from the "rounding" box
     let d = Number(document.getElementById("rounding").value)
-
+    return (Math.round(value*10**d))/10**d
 }
 
 // Calculate the y-value of a parabola from standand form
 function y_quad(a, b, c, x) {
-
+   
 }
 
 // Determine the zeros of a quadratic using user-inputs for a, b, and c
@@ -38,5 +38,25 @@ function zeros() {
 // Determine the vertex of a quadratic using user-inputs for a, b, and c
 function vertex() {
 
+}
+
+// Determine the average for two numbers
+function average(a,b) {
+    return (a+b)/2
+}
+
+// Find the difference between two numbers
+function delta(a,b) {
+    return a-b
+}
+
+// Find the slope of a line
+function slope(x1,x2,y1,y2) {
+    return delta(x1,y2)/delta(y1,y2)
+}
+
+// Find the length of a line
+function line_length(x1,x2,y1,y2) {
+    return Math.sqrt((delta(x1,x2)**2)+(delta(y1,y2)**2))
 }
 

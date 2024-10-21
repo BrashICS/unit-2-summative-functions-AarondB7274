@@ -5,9 +5,10 @@
 
 /* Using font-size: larger to make things pop. Feel free to change. */
 body {
-    background-color:lightcyan;
+    background-image:linear-gradient(darkslateblue,black);
     margin: 20px;
     font-size: larger;
+    color:silver;
 }
 
 /* Make the font a bit bigger on buttons and input boxes */
