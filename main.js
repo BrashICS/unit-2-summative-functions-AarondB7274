@@ -11,6 +11,10 @@
 /*** Event Listeners ***/
 document.getElementById("zeros").addEventListener("click", zeros);
 document.getElementById("vertex").addEventListener("click", vertex);
+document.getElementById("cube_volume").addEventListener("click", cube_volume);
+document.getElementById("cube_area").addEventListener("click", cube_area);
+document.getElementById("sphere_volume").addEventListener("click", sphere_volume);
+document.getElementById("sphere_area").addEventListener("click", sphere_area);
 
 /*** Functions ***/
 
@@ -42,7 +46,7 @@ function vertex() {
 
 // Determine the average for two numbers
 function average(a,b) {
-    return (a+b)/2
+    let avr = (a+b)/2
 }
 
 // Find the difference between two numbers
@@ -56,12 +60,39 @@ function slope(x1,x2,y1,y2) {
 }
 
 // Find the length of a line
-function line_length(x1,x2,y1,y2) {
-    return Math.sqrt((delta(x1,x2)**2)+(delta(y1,y2)**2))
+function line_length() {
+    let x1 = Number(document.getElementById("x1").value)
+    let x2 = Number(document.getElementById("x2").value)
+    let y1 = Number(document.getElementById("y1").value)
+    let y2 = Number(document.getElementById("y2").value)
+    let length = Math.sqrt((delta(x1,x2)**2)+(delta(y1,y2)**2))
 }
 
 // Find the volume for a rectangular prism
-function rect_prism_volume(length,width,height) {
-    return length*width*height
+function cube_volume() {
+    let length = Number(document.getElementById("length").value)
+    let width = Number(document.getElementById("width").value)
+    let height = Number(document.getElementById("height").value)
+    let vol = round_user(length*width*height)
+    document.getElementById("geometric_output").textContent = (`The volume of a rectangular prism with those dimensions is ${vol}`)
 }
 
+function cube_area() {
+    let length = Number(document.getElementById("length").value)
+    let width = Number(document.getElementById("width").value)
+    let height = Number(document.getElementById("height").value)
+    let area = round_user(length*width*2)+(length*height*2)+(width*height*2)
+    document.getElementById("geometric_output").textContent = (`The surface area of a rectangular prism with those dimensions is ${area}`)
+}
+
+function sphere_volume() {
+    let radius = Number(document.getElementById("radius").value)
+    let vol = round_user(4/3*Math.PI*radius**3)
+    document.getElementById("geometric_output").textContent = (`The volume of a sphere with those dimensions is ${vol}`)
+}
+
+function sphere_area() {
+    let radius = Number(document.getElementById("radius").value)
+    let area = round_user(4*Math.PI*radius**2)
+    document.getElementById("geometric_output").textContent = (`The surface area of a sphere with those dimensions is ${area}`)
+}
