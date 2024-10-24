@@ -49,7 +49,7 @@ function vertex() {
 
 // Determine the average for two numbers
 function average(a,b) {
-    let avr = (a+b)/2
+    return (a+b)/2
 }
 
 // Find the difference between two numbers
