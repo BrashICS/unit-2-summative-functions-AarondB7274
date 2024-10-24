@@ -5,9 +5,10 @@
 
 /* Using font-size: larger to make things pop. Feel free to change. */
 body {
-    background-color:lightcyan;
+    background-image:linear-gradient(darkslateblue,black);
     margin: 20px;
     font-size: larger;
+    color:silver;
 }
 
 /* Make the font a bit bigger on buttons and input boxes */
@@ -23,4 +24,12 @@ button, input {
 /* Rounding and Quadratics input number boxes. Add class="short_number" to your input boxes */
 .short_number {
     width: 50px;
+}
+
+h1, h3, h4 {
+    text-align: center;
+}
+
+button, input {
+    background-color: silver;
 }

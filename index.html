@@ -28,15 +28,74 @@
         
         <!-- Geometry -->
         <div>
-            <h4>Part 1 - Geometry</h4>
-            
+            <h4>Section One - Geometry</h4>
+            <p>
+                Find the volume or surface area of a cube or Sphere.
+            </p>
+
         </div>
-        
+        <label for="height">height:</label>
+            <input id="height" name="height" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+            <label for="length">length:</label>
+            <input id="length" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+            <label for="width">width:</label>
+            <input id="width" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
+            <label for="radius">radius:</label>
+            <input id="radius" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
+
+            <br>
+
+            <button id="cube_volume">Cube Volume</button> 
+            <button id="cube_area">Cube Surface Area</button>
+
+            <br>
+
+            <button id="sphere_area">Sphere Volume</button> 
+            <button id="sphere_volume">Sphere Surface Area</button>
+
+            <!-- Output for the area/volume -->
+            <div id="geometric_output"></div>
+
+            <hr>
+            <div>
+                <h4>Section Two - Lines</h4>
+                <p>
+                    Find the volume or surface area of a cube or Sphere.
+                </p>
+    
+            </div>
+            <p>
+                Enter the values of "x1", "x2", "y1" and "y2" to find the slope, length or midpoint of a line.
+            </p>
+
+            <label for="x1">x1:</label>
+            <input id="x1" name="x1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+            <label for="x2">x2:</label>
+            <input id="x2" name="x2" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+
+            <br>
+
+            <label for="y1">y1:</label>
+            <input id="y1" name="y1" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+            <label for="y2">y2:</label>
+            <input id="y2" name="y2" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
+
+            <br>
+
+            <button id="slope">Find the Slope of a line</button>
+            <button id="line_length">Find the Length of a line segment</button>
+            <button id="midpoint">Find the midpoint of a line segemnt</button>
+
+            <!-- Output for length, slope and midpoint -->
+            <div id="line_output"></div>
+
+            <br>
         <hr>
 
         <!-- Quadratics -->
         <div>
-            <h4>Part 2 - Quadratics</h4>
+            <h4>Section Three - Quadratics</h4>
+        
             <p>
                 Enter the values of "a", "b", and "c" of a quadratic in standard form:
             </p>
@@ -46,13 +105,25 @@
             <label for="b">b:</label>
             <input id="b" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
             <label for="c">c:</label>
-            <input id="c" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
+            <input id="c" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
 
+            <br>
+            
             <button id="zeros">Find the Zeros</button> 
             <button id="vertex">Find the Vertex</button>
 
             <!-- Output for the zeros or vertex -->
             <div id="quadratic_output"></div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h4>Section Four - Trig </h4>
+        
+            <p>
+                Enter the values of "a", "b", and "c" of a quadratic in standard form:
+            </p>
         </div>
 
         
