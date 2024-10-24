@@ -18,6 +18,8 @@ document.getElementById("sphere_area").addEventListener("click", sphere_area);
 document.getElementById("slope").addEventListener("click", slope);
 document.getElementById("midpoint").addEventListener("click", midpoint);
 document.getElementById("line_length").addEventListener("click", line_length);
+document.getElementById("vertex").addEventListener("click", vertex);
+document.getElementById("zeros").addEventListener("click", zeros);
 
 /*** Functions ***/
 
@@ -34,17 +36,29 @@ function round_user(value) {
 }
 
 // Calculate the y-value of a parabola from standand form
-function y_quad(a, b, c, x) {
-   
+function y_quad(a,b,c,x) {
+    return a*(x**2)+(b*x)+c
 }
 
 // Determine the zeros of a quadratic using user-inputs for a, b, and c
 function zeros() {
+    let a = Number(document.getElementById("a").value)
+    let b = Number(document.getElementById("b").value)
+    let c = Number(document.getElementById("c").value)
+    let zero1 = round_user(y_quad(a,b,c,0))
+    let zero2 = round_user(y_quad(a,b,c,0))
+    document.getElementById("quadratic_output").textContent = (`The zeros of a parabola on those points are ${zero1} and ${zero2}`)
 }
 
 // Determine the vertex of a quadratic using user-inputs for a, b, and c
 function vertex() {
-
+    let a = Number(document.getElementById("a").value)
+    let b = Number(document.getElementById("b").value)
+    let c = Number(document.getElementById("c").value)
+    let x = -b/(a*2)
+    let y = y_quad(a,b,c,x)
+    document.getElementById("quadratic_output").textContent = (`The vertex of a parabola on those points is ${x},${y}`)
+    console.log(x,y)
 }
 
 // Determine the average for two numbers
