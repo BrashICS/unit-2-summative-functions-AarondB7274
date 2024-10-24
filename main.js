@@ -15,6 +15,9 @@ document.getElementById("cube_volume").addEventListener("click", cube_volume);
 document.getElementById("cube_area").addEventListener("click", cube_area);
 document.getElementById("sphere_volume").addEventListener("click", sphere_volume);
 document.getElementById("sphere_area").addEventListener("click", sphere_area);
+document.getElementById("slope").addEventListener("click", slope);
+document.getElementById("midpoint").addEventListener("click", midpoint);
+document.getElementById("line_length").addEventListener("click", line_length);
 
 /*** Functions ***/
 
@@ -51,12 +54,28 @@ function average(a,b) {
 
 // Find the difference between two numbers
 function delta(a,b) {
-    return a-b
+    return b-a
 }
 
 // Find the slope of a line
-function slope(x1,x2,y1,y2) {
-    return delta(x1,y2)/delta(y1,y2)
+function slope() {
+    let x1 = Number(document.getElementById("x1").value)
+    let x2 = Number(document.getElementById("x2").value)
+    let y1 = Number(document.getElementById("y1").value)
+    let y2 = Number(document.getElementById("y2").value)
+    let slope = delta(x1,x2)/delta(y1,y2)
+    document.getElementById("line_output").textContent = (`The slope of a line that passes through those points is ${slope}`)
+}
+
+// Fine the midpoint of a line
+function midpoint() {
+    let x1 = Number(document.getElementById("x1").value)
+    let x2 = Number(document.getElementById("x2").value)
+    let y1 = Number(document.getElementById("y1").value)
+    let y2 = Number(document.getElementById("y2").value)
+    let xmidpoint = x2-x1
+    let ymidpoint = y2-y1
+    document.getElementById("line_output").textContent = (`The midpoint of a line with that start and end is ${xmidpoint},${ymidpoint}`)
 }
 
 // Find the length of a line
@@ -66,6 +85,7 @@ function line_length() {
     let y1 = Number(document.getElementById("y1").value)
     let y2 = Number(document.getElementById("y2").value)
     let length = Math.sqrt((delta(x1,x2)**2)+(delta(y1,y2)**2))
+    document.getElementById("line_output").textContent = (`The length of a line with that start and end is ${length}`)
 }
 
 // Find the volume for a rectangular prism
