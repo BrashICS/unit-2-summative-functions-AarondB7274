@@ -73,8 +73,8 @@ function midpoint() {
     let x2 = Number(document.getElementById("x2").value)
     let y1 = Number(document.getElementById("y1").value)
     let y2 = Number(document.getElementById("y2").value)
-    let xmidpoint = x2-x1
-    let ymidpoint = y2-y1
+    let xmidpoint = average(x1,x2)
+    let ymidpoint = average(y1,y2)
     document.getElementById("line_output").textContent = (`The midpoint of a line with that start and end is ${xmidpoint},${ymidpoint}`)
 }
 
