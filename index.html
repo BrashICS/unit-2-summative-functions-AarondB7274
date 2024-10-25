@@ -45,13 +45,13 @@
 
             <br>
 
-            <button id="cube_volume">Cube Volume</button> 
-            <button id="cube_area">Cube Surface Area</button>
+            <button id="cube_volume">Get Volume</button> 
+            <button id="cube_area">Get Surface Area</button>
 
             <br>
 
-            <button id="sphere_area">Sphere Volume</button> 
-            <button id="sphere_volume">Sphere Surface Area</button>
+            <button id="sphere_area">Get Volume</button> 
+            <button id="sphere_volume">Get Surface Area</button>
 
             <!-- Output for the area/volume -->
             <div id="geometric_output"></div>
@@ -82,9 +82,9 @@
 
             <br>
 
-            <button id="slope">Find the Slope of a line</button>
-            <button id="line_length">Find the Length of a line segment</button>
-            <button id="midpoint">Find the midpoint of a line segemnt</button>
+            <button id="slope">Get Slope</button>
+            <button id="line_length">Get Length</button>
+            <button id="midpoint">Get Midpoint</button>
 
             <!-- Output for length, slope and midpoint -->
             <div id="line_output"></div>
@@ -105,12 +105,12 @@
             <label for="b">b:</label>
             <input id="b" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
             <label for="c">c:</label>
-            <input id="c" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+            <input id="c" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
 
             <br>
             
-            <button id="zeros">Find the Zeros</button> 
-            <button id="vertex">Find the Vertex</button>
+            <button id="zeros">Get Zeros</button> 
+            <button id="vertex">Get Vertex</button>
 
             <!-- Output for the zeros or vertex -->
             <div id="quadratic_output"></div>
@@ -120,10 +120,30 @@
 
         <div>
             <h4>Section Four - Trig </h4>
+
+            <p>
+                Note: this section is currently vitrified and does not work, I am attemtping to solve this.
+            </p>
         
             <p>
-                Enter the values of "a", "b", and "c" of a quadratic in standard form:
+                Enter the values of "adjcent", "oposite", and "hypotenuse" of a right angle triangle:
             </p>
+
+            <label for="adjacent">adjacent:</label>
+            <input id="adjacent" name="adjacent" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+            <label for="oposite">oposite:</label>
+            <input id="oposite" type="number" value="1" placeholder="1" autocomplete="off" class="short_number"> &nbsp;
+            <label for="hypotenuse">hypotenuse:</label>
+            <input id="hypotenuse" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
+
+            <br>
+
+            <button id="hypotenuse_go">Get Hypotenuse</button>
+            <button id="adjacent_go">Get Adjacent</button>
+            <button id="oposite_go">Get Oposite</button>
+
+            <!-- Output for the sides or angles (if I got there) -->
+            <div id="trig_output"></div>
         </div>
 
         
