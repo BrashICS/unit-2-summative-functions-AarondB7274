@@ -20,6 +20,7 @@ document.getElementById("midpoint").addEventListener("click", midpoint);
 document.getElementById("line_length").addEventListener("click", line_length);
 document.getElementById("vertex").addEventListener("click", vertex);
 document.getElementById("zeros").addEventListener("click", zeros);
+document.getElementById("hypotenuse_go").addEventListener("click", hypotenuse_run);
 
 /*** Functions ***/
 
@@ -129,4 +130,11 @@ function sphere_area() {
     let radius = Number(document.getElementById("radius").value)
     let area = round_user(4*Math.PI*radius**2)
     document.getElementById("geometric_output").textContent = (`The surface area of a sphere with those dimensions is ${area}`)
+}
+
+function hypotenuse_run() {
+    let a = Number(document.getElementById("adjacent").value)
+    let b = Number(document.getElementById("oposite").value)
+    let c = Math.sqrt(a**2+b**2)
+    document.getElementById("trig_output").textContent = (`The hypotenuse of a triangle with those dimensions is ${c}`)
 }
